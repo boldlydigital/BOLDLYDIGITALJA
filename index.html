@@ -8,6 +8,8 @@
   <!-- Manifest added by SuperPWA - Progressive Web Apps Plugin For WordPress -->
 <link rel="manifest" href="/wordpress/boldlydigitalja/superpwa-manifest.json">
 <meta name="theme-color" content="#D5E0EB">
+<link rel="apple-touch-icon" sizes="192x192" href="https://boldlydigital.github.io/boldlydigitalja/wp-content/uploads/2020/09/logo.png">
+<link rel="apple-touch-icon" sizes="512x512" href="https://boldlydigital.github.io/boldlydigitalja/wp-content/uploads/2018/12/features-icon2.png">
 <!-- / SuperPWA.com -->
 <title>BOLDLY DIGITAL</title>
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -52,7 +54,16 @@ img.emoji {
 <link rel='shortlink' href='https://boldlydigital.github.io/boldlydigitalja/' />
 <link rel="alternate" type="application/json+oembed" href="https://boldlydigital.github.io/boldlydigitalja/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fboldlydigital.github.io%2Fboldlydigitalja%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://boldlydigital.github.io/boldlydigitalja/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fboldlydigital.github.io%2Fboldlydigitalja%2F&#038;format=xml" />
-<style type="text/css" id="custom-background-css">
+		<link rel="manifest" href="https://boldlydigital.github.io/boldlydigitalja/wp-json/wp/v2/web-app-manifest">
+		<meta name="theme-color" content="#e5e5e5">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="YES">
+							<link rel="apple-touch-startup-image" href="https://boldlydigital.github.io/boldlydigitalja/wp-content/uploads/2020/09/cropped-logo-192x192.png">
+		
+				<meta name="apple-mobile-web-app-title" content="BOLDLY DIGITAL">
+		<meta name="application-name" content="BOLDLY DIGITAL">
+		<style type="text/css" id="custom-background-css">
 body.custom-background { background-color: #e5e5e5; background-image: url("https://boldlydigital.github.io/boldlydigitalja/wp-content/uploads/2018/12/pexels-photo-167832-1.jpeg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
 </style>
 	<link rel="icon" href="https://boldlydigital.github.io/boldlydigitalja/wp-content/uploads/2020/09/cropped-logo-32x32.png" sizes="32x32" />
@@ -215,7 +226,19 @@ body.custom-background { background-color: #e5e5e5; background-image: url("https
 	    <a href="#masthead" title="Go to Top" class="fa-angle-up"></a>       
 	  </div>
 	</div><!-- #page -->
-<script type='text/javascript' id='superpwa-register-sw-js-extra'>
+	<script>
+		if ( navigator.serviceWorker ) {
+			window.addEventListener( 'load', function() {
+									{
+						navigator.serviceWorker.register(
+							"\/wordpress\/boldlydigitalja\/?wp_service_worker=1",
+							{"scope":"\/wordpress\/boldlydigitalja\/"}						).then( reg => {
+													} );
+					}
+							} );
+		}
+	</script>
+	<script type='text/javascript' id='superpwa-register-sw-js-extra'>
 /* <![CDATA[ */
 var superpwa_sw = {"url":"\/wordpress\/boldlydigitalja\/superpwa-sw.js"};
 /* ]]> */
